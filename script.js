@@ -1,5 +1,6 @@
 // Variables to control game state
 let gameRunning = false; // Keeps track of whether game is active or not
+let isCountdownRunning = false; // Keeps track of whether countdown is active
 let dropMaker; // Will store our timer that creates drops regularly
 let gameTimer; // Will store our countdown timer
 let timeRemaining = 50; // Track remaining time (50 seconds)
@@ -40,6 +41,7 @@ function showCountdown() {
   // Clear any existing intervals to ensure clean state
   clearInterval(dropMaker);
   clearInterval(gameTimer);
+  isCountdownRunning = true;
   
   const countdownOverlay = document.getElementById("countdown-overlay");
   const countdownText = document.getElementById("countdown-text");
@@ -56,6 +58,7 @@ function showCountdown() {
       countdownText.textContent = "Go!";
       setTimeout(() => {
         countdownOverlay.style.display = "none";
+        isCountdownRunning = false;
         // Start the actual game after countdown
         createDrop();
         dropMaker = setInterval(createDrop, 1000);
@@ -141,8 +144,8 @@ function endGameLoss() {
 }
 
 function createDrop() {
-  // don't spawn new drops if game has ended
-  if (!gameRunning) return;
+  // don't spawn new drops if game has ended or countdown is running
+  if (!gameRunning || isCountdownRunning) return;
 
   // Randomly decide if this is a bad drop based on current score
   const isBadDrop = Math.random() < getBadDropProbability();
