@@ -92,7 +92,7 @@ body {
 
 #start-btn {
     padding: 8px 16px;
-    background-color: #4CAF50;
+    background-color: rgb(255, 201, 7);
     color: white;
     border: none;
     border-radius: 4px;
@@ -101,7 +101,7 @@ body {
 }
 
 #start-btn:hover {
-    background-color: #45a049;
+    background-color: rgb(255, 201, 7);
 }
 
 .score, .bad-score {
@@ -151,7 +151,7 @@ body {
 
 #loss-restart-btn {
     padding: 12px 24px;
-    background-color: #4CAF50;
+    background-color: rgb(255, 201, 7);
     color: white;
     border: none;
     border-radius: 4px;
@@ -161,7 +161,7 @@ body {
 }
 
 #loss-restart-btn:hover {
-    background-color: #45a049;
+    background-color: rgb(255, 201, 7);
 }
 
 .game-title {
@@ -217,7 +217,7 @@ body {
 
 #restart-btn {
     padding: 12px 24px;
-    background-color: #4CAF50;
+    background-color: rgb(255, 201, 7);
     color: white;
     border: none;
     border-radius: 4px;
@@ -227,7 +227,7 @@ body {
 }
 
 #restart-btn:hover {
-    background-color: #45a049;
+    background-color: rgb(255, 201, 7);
 }
 
 #victory-modal {
@@ -245,7 +245,7 @@ body {
 
 #victory-restart-btn {
     padding: 12px 24px;
-    background-color: #4CAF50;
+    background-color: rgb(255, 201, 7);
     color: white;
     border: none;
     border-radius: 4px;
@@ -255,11 +255,11 @@ body {
 }
 
 #victory-restart-btn:hover {
-    background-color: #45a049;
+    background-color: rgb(255, 201, 7);
 }
 
 .modal-message a {
-    color: #2E9DF7;
+    color: rgb(255, 201, 7);
     text-decoration: none;
     font-weight: bold;
 }
